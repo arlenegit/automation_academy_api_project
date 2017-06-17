@@ -1,8 +1,0 @@
-apiResponse\distanceMetric\ObjectRow.class
-apiResponse\distanceMetric\ObjectElement.class
-restassured\RestAssuredCore.class
-stepdefs\ApiTestingSteps.class
-actions\ApiTestMethods.class
-apiResponse\distanceMetric\DistanceApiResponse.class
-apiResponse\distanceMetric\ObjectTextValue.class
-cucumberTest\TestRunner.class

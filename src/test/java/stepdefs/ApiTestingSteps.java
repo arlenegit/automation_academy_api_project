@@ -22,13 +22,13 @@ public class ApiTestingSteps {
         apiTestmethods.getDistance("York,UK","London,UK","imperial",200);
     }
 
-    @Given("^that I want to find the distance between Washington,DC and New York City, NY in metric$")
+    /*@Given("^that I want to find the distance between Washington,DC and New York City, NY in metric$")
     public void that_I_want_to_find_the_distance_between_Washington_DC_and_New_York_City_NY_in_metric() throws Throwable {
         apiTestmethods.getDistance("Washington,DC","New York City, NY","metric",200);
-    }
+    }*/
 
 
-    @When("^I send the request to Distance Matrix API$")
+    @When("^I send valid request to Distance Matrix API$")
     public void i_send_the_request_to_Distance_Matrix_API() throws Throwable {
         
         
@@ -40,16 +40,8 @@ public class ApiTestingSteps {
     }
 
 
-    @When("^the value of origin is blank$")
-    public void the_value_of_origin_is_blank() throws Throwable {
-        apiTestmethods.getDistance("","Glasgow,UK","metric",200);
+    @Given("^that I want to find the 'bicycling' time between 'origin' and 'destination'$")
+    public void that_I_want_to_find_the_bicycling_time_between_origin_and_destination() throws Throwable {
+        apiTestmethods.getTimeUsingBicycle("London,UK","Brighton,UK","bicycling",200);
     }
-
-    @Then("^the status is 'INVALID_REQUEST'$")
-    public void the_status_is_INVALID_REQUEST() throws Throwable {
-        apiTestmethods.verifyInvalidRequestResponseCode("INVALID_REQUEST");
-
-    }
-
-
 }
