@@ -31,15 +31,12 @@ public class ApiTestMethods {
 
     }
 
-    public void getTimeUsingBicycle(String origin, String destination, String mode, int status){
+    public void getTimeUsingBicycle(){
 
-        response = RestAssuredCore.findTravelTime(origin, destination, mode, status);
-        //RestAssuredCore.printResponse(response);
+        response = RestAssuredCore.findTravelTime();
         r = new Gson().fromJson(response.asString(), DistanceApiResponse.class);
-        System.out.println("Time taken to travel between "+origin+" & "+destination+" using bicycle"+" is "+r.rows[0].elements[0].duration.text+"\n");
-
+        System.out.println("The bicycling time"+" is "+r.rows[0].elements[0].duration.text+"\n");
 
     }
-
 
 }

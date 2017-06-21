@@ -24,7 +24,7 @@ public class RestAssuredCore {
                 .extract();
     }
 
-    public static ExtractableResponse findTravelTime(final String origin, final String destination, final String mode, final int status){
+    /*public static ExtractableResponse findTravelTime(final String origin, final String destination, final String mode, final int status){
 
         return given()
                 .contentType("application/json")
@@ -37,6 +37,22 @@ public class RestAssuredCore {
                 .then()
                 .assertThat()
                 .statusCode(is(status))
+                .extract();
+    }*/
+
+    public static ExtractableResponse findTravelTime(){
+
+        return given()
+                .contentType("application/json")
+                .param("origins", "Delhi,IN")
+                .param("destinations", "Bombay,IN")
+                .param("mode", "walking")
+                .param("key", ApiSettings.API_KEY)
+                .when()
+                .get(ApiSettings.DISTANCE_URI)
+                .then()
+                .assertThat()
+                .statusCode(is(200))
                 .extract();
     }
 
