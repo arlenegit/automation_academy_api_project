@@ -44,9 +44,9 @@ public class RestAssuredCore {
 
         return given()
                 .contentType("application/json")
-                .param("origins", "Delhi,IN")
-                .param("destinations", "Bombay,IN")
-                .param("mode", "walking")
+                .param("origins", "York,UK")
+                .param("destinations", "Durham,UK")
+                .param("mode", "bicycling")
                 .param("key", ApiSettings.API_KEY)
                 .when()
                 .get(ApiSettings.DISTANCE_URI)

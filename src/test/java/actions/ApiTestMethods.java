@@ -27,13 +27,14 @@ public class ApiTestMethods {
         response = RestAssuredCore.findDistanceInUnits(origin, destination, unit, status);
         //RestAssuredCore.printResponse(response);
          r = new Gson().fromJson(response.asString(), DistanceApiResponse.class);
-        System.out.println("Distance between "+origin+" & "+destination+" is "+r.rows[0].elements[0].distance.text+"\n");
+        System.out.println("\n"+"Distance between "+origin+" & "+destination+" is "+r.rows[0].elements[0].distance.text+"\n");
 
     }
 
     public void getTimeUsingBicycle(){
 
         response = RestAssuredCore.findTravelTime();
+        //RestAssuredCore.printResponse(response);
         r = new Gson().fromJson(response.asString(), DistanceApiResponse.class);
         System.out.println("The bicycling time"+" is "+r.rows[0].elements[0].duration.text+"\n");
 

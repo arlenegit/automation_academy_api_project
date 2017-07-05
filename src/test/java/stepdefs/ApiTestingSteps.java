@@ -17,11 +17,11 @@ public class ApiTestingSteps {
         apiTestmethods.getDistance("Edinburgh,UK","Glasgow,UK","imperial",200);
     }
 
-/*    @Given("^that I want to find the distance between Washington,DC and New York City, NY in metric$")
+    @Given("^that I want to find the distance between Washington,DC and New York City, NY in metric$")
     public void that_I_want_to_find_the_distance_between_Washington_DC_and_New_York_City_NY_in_metric() throws Throwable {
         apiTestmethods.getDistance("Washington,DC","New York City,NY","metric",200);
 
-    }*/
+    }
 
 
     @When("^I send valid request to Distance Matrix API$")
@@ -35,8 +35,8 @@ public class ApiTestingSteps {
     }
 
 
-/*    @Given("^that I want to find the 'bicycling' time between 'origin' and 'destination'$")
+   @Given("^that I want to find the 'bicycling' time between 'origin' and 'destination'$")
     public void that_I_want_to_find_the_bicycling_time_between_origin_and_destination() throws Throwable {
         apiTestmethods.getTimeUsingBicycle();
-    }*/
+    }
 }

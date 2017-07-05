@@ -13,7 +13,7 @@ Feature: Find distance between two places using the Google Maps Distance Matrix 
     Examples:
     |origin|destination|units|
     |Edinburgh,UK|Glasgow,UK|imperial|
-    #|Washington,DC|New York City, NY|metric|
+    |Washington,DC|New York City, NY|metric|
 
   #Activity2: Create a new scenario to find the travel time between any two places when mode of travel is 'bicycling'
   @test
